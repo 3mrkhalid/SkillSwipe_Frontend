@@ -8,9 +8,10 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff, Import } from "lucide-react";
 import { useLang } from "../_components/LanguageProvider";
 import { useTheme } from "../_components/ThemeContext";
+import {register} from "../api/auth"
 
 
 function Signup() {
@@ -45,11 +46,16 @@ const isDark = theme === "dark";
       return setError(t("password_not_match") || "Passwords do not match");
     }
 
+    const payload = {
+      username,
+      email,
+      password
+    }
+
     try {
       setLoading(true);
 
-      // TODO: replace with real signup API
-      // await signup({ username, email, password });
+      const data = await register(payload);
 
       router.push("/dashboard");
     } catch (err) {
@@ -77,17 +83,8 @@ const isDark = theme === "dark";
 
         {/* Logo */}
        <div className={`flex items-center justify-center mb-10  ${isArabic ? "flex-row-reverse " : ""}`}>
-          <div className="relative">
-            <img
-              src="/assets/img/logo.webp"
-              width={70}
-              height={50}
-              alt="Logo"
-              className="items-center"
-            />
-           
-          </div>
 
+          
           
           <h2 className="text-3xl font-bold text-gray-900 ">
             {t("register")}
@@ -198,9 +195,9 @@ const isDark = theme === "dark";
             <Checkbox
               checked={rememberMe}
               onCheckedChange={setRememberMe}
-              className="cursor-pointer"
+              className="cursor-pointer border"
             />
-            <span className="text-sm">{t("remember_me")}</span>
+            <span className="text-sm text-gray-700 font-medium cursor-pointer select-none">{t("remember_me")}</span>
           </div>
 
           <Button
@@ -219,14 +216,14 @@ const isDark = theme === "dark";
                <div className="grid gap-3">
                  <Button
                    variant="outline"
-                   className="w-full py-3 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
+                   className="w-full py-3 rounded-xl border bg-white text-zinc-900 border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
                  >
                    <FcGoogle className="w-5 h-5" />
                    <span>{t("sign_up_google") }</span>
                  </Button>
                  <Button
                    variant="outline"
-                   className="w-full py-3 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
+                   className="w-full py-3 rounded-xl border bg-white text-zinc-900 border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
                  >
                    <FaFacebook className="w-5 h-5 text-blue-600" />
                    <span>{t("sign_up_facebook") || "Continue with Facebook"}</span>

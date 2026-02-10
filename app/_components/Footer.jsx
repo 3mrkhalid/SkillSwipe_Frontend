@@ -34,6 +34,15 @@ function Footer() {
             {t("Footer_copyright")}
           </span>
 
+           <div className="bottom-0 left-0 w-full flex justify-center  mt-5">
+              <Link href="/about_us" className="md:hidden sm:flex flex gap-2">
+                <h1 className={` ${isDark? "text-neutral-900":"text-neutral-50"} p-5 text-lg`}>{t("About_us")}</h1>
+              </Link>
+              <Link href="/contact_us" className="md:hidden sm:flex flex gap-2">
+                <h1 className={`${isDark? "text-neutral-900":"text-neutral-50"} p-5 text-lg rounded-md`}>{t("ContactUs")}</h1>
+              </Link>
+        </div>
+
           <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
             <li>
               <a href="#" className={` hover:opacity-75 ${isDark? "text-neutral-800": "text-neutral-400"}`}>
@@ -58,14 +67,7 @@ function Footer() {
             
           </ul>
         </div>
-        <div className="bottom-0 left-0 w-full flex justify-center  mt-5">
-        <Link href="/about_us" className="md:hidden sm:flex flex gap-2">
-          <h1 className={` ${isDark? "text-neutral-900":"text-neutral-50"} p-5 text-lg`}>{t("About_us")}</h1>
-        </Link>
-        <Link href="/contact_us" className="md:hidden sm:flex flex gap-2">
-          <h1 className={`${isDark? "text-neutral-900":"text-neutral-50"} p-5 text-lg rounded-md`}>{t("ContactUs")}</h1>
-        </Link>
-      </div>
+       
       </div>
     </footer>
   );

@@ -20,8 +20,6 @@ const translations = {
     Mostafa_Ali_des:"Designs and builds modern, responsive user interfaces with a strong focus on performance and user experience.",
     Ziad_Yasser:"Backend Developer",
     Ziad_Yasser_des:"Builds secure and scalable backend systems, APIs, and handles data flow between services and AI components.",
-    Ahmed_Labib:"AI / ML Engineer",
-    Ahmed_Labib_des:"Works on AI models, NLP tasks, and machine learning pipelines powering summaries, questions, and translations.",
     Home: "Home",
     hero: "Every Answer Counts",
     description_Hero: "Join a community where every question gives you answers, and every answer earns you points. Swap skills, ideas, and knowledge effortlessly.",
@@ -67,9 +65,9 @@ const translations = {
     step3_description:"Build your reputation, earn points, and unlock new learning opportunities",
     free_trial_text:"Learn and share your skills 100% free.",
 
-    Footer_Heading: "Stay Ahead with AI",
+    Footer_Heading: "Learn, and Share Skills",
     Footer_Description:
-      "Explore, learn, and create with our free AI tools — summaries, quizzes, translations, and more at your fingertips.",
+      "Discover new skills, exchange knowledge, and grow your expertise — all in one place.",
     Footer_copyright:"© 2026 Kernel Syndicators. All rights reserved.",
     //Login && Register
     register:"Register",
@@ -102,63 +100,9 @@ const translations = {
     sign_up_facebook: "Sign up with Facebook",
     fill_all_fields:"All fields must be filled out",
 
-    //Dashboard
-    Dashboard_Home: "Dashboard",
-    Dashboard_Links: "My Links",
-    Dashboard_Statistics: "Statistics",
-    Dashboard_Profile: "Profile Settings",
-    Dashboard_Settings: "Settings",
-    Dashboard_Support: "Support",
-    Dashboard_Logout: "Logout",
-    Dashboard_Withdraw : "Withdraw",
-    Dashboard_Referrals : "Referrals",
-    Dashboard_Manage_Links: "Manage Links",
-    Dashboard_Competition: "Competition",
+    
 
-    //Dashboard Stats
-    Total_Earnings: "Total Earnings",
-    Balance : "Balance",
-    Total_Withdraw: "Total Withdraw",
-    Referral_Earning: "Referral Earning",
-
-    //Dashboard General
-    New_Shorten_Link: "New Shorten Link",
-
-    //Dashboard Manage Links
-    Manage_Links: "Manage Links",
-    Create_New_Link: "Create, manage, and track your shortened URLs",
-    Refresh: "Refresh",
-    total_links: "Total Links",
-    total_clicks: "Total Clicks",
-    Active_links:"Active Links",
-    Pause_links:"Pause Links",
-
-    //Manage Table for Manage Links
-    Title_ShortLink:"Title/ShortLink",
-    Orginal_link:"Original Link",
-    Status:"Status",
-    Created_At:"Created At",
-    Expires_At:"Expires At",
-    Actions:"Actions",
-
-    //Withdraw Page
-    Withdraw:"Withdraw",
-    Withdraw_Funds:"Withdraw Funds",
-    Show_Method:"Choose your preferred withdrawal method",
-    Available_Balance:"Available Balance",
-    Withdraw_Amount:"Withdraw Amount",
-    Minimum_Withdraw_Amount:"Minimum withdrawal: $10",
-    Select_Withdraw_Method:"Select Withdraw Method",
-    Withdraw_Now:"Withdraw Now",
-    Withdraw_History:"Withdraw History",
-    No_Withdrawals_Yet:"No Withdraw Yet",
-    Amount:"Amount",
-    Method:"Method",
-    Status_Withdraw:"Status Withdraw",
-    Date:"Date",
-    Ready_Withdraw:"Ready to withdraw",
-    Recent_Withdrawals:"Recent Withdrawals",
-    View_Details:"View Details",
+   
 
     //Support Chat
     Support_Chat_Title: "Support Chat",
@@ -224,6 +168,7 @@ const translations = {
     return_home:"ارجع للصفحة الرئيسية",
     GetStarted: "ابدأ الآن",
     ContactUs: "اتصل بنا",
+    Home:"الصفحة الرئيسية",
     About_us: "من نحن",
     About_us_sub:"فريق يؤمن بأن التعلّم يجب أن يكون بسيطًا ومتاحًا للجميع، ونسعى لتقديم أدوات تسهّل الوصول إلى المعرفة.",
     AmrKhalid:"مطور برامج متكامل ورئيس فريق",
@@ -232,9 +177,6 @@ const translations = {
     Mostafa_Ali_des:"يقوم بتصميم وبناء واجهات مستخدم حديثة وسريعة الاستجابة مع التركيز القوي على الأداء وتجربة المستخدم.",
     Ziad_Yasser:"مطور الواجهة الخلفية",
     Ziad_Yasser_des:"يقوم ببناء أنظمة خلفية وواجهات برمجة تطبيقات آمنة وقابلة للتطوير، ويتعامل مع تدفق البيانات بين الخدمات ومكونات الذكاء الاصطناعي.",
-    Ahmed_Labib:"مهندس الذكاء الاصطناعي والتعلم الآلي",
-    Ahmed_Labib_des:"يعمل على نماذج الذكاء الاصطناعي ومهام البرمجة اللغوية العصبية وخطوط أنابيب التعلم الآلي التي تعمل على تشغيل الملخصات والأسئلة والترجمات.",
-    Home: "الصفحة الرئيسية",
     hero: "كل إجابة مميزه",
     description_Hero: "انضم إلى مجتمع حيث يمنحك كل سؤال إجابات، وكل إجابة تكسبك نقاطًا. تبادل المهارات والأفكار والمعرفة دون عناء.",
     Features_heading:"قم بقياس مدى تأثير مهاراتك",
@@ -282,9 +224,9 @@ const translations = {
 
     
 
-    Footer_Heading: "ابق في المقدمة مع الذكاء الاصطناعي",
+    Footer_Heading: "تعلم وشارك المهارات",
     Footer_Description:
-      "استكشف وتعلم وأنشئ باستخدام أدوات الذكاء الاصطناعي المجانية لدينا — ملخصات واختبارات وترجمات والمزيد في متناول يدك",
+      "اكتشف مهارات جديدة، وتبادل المعرفة، وتنمية خبرتك — كل ذلك في مكان واحد.",
 
 
     Footer_copyright:"جميع الحقوق محفوظة . 2026© Kernel Syndicators.",  

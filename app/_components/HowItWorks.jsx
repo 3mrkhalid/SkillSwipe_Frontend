@@ -50,8 +50,8 @@ function HowItWorks() {
   },
   {
     number: "3",
-    title: t("step2_title"),
-    description: t("step2_description"),
+    title: t("step3_title"),
+    description: t("step3_description"),
     iconColor: "text-emerald-500",
     icons: [
       <HiOutlineArrowTrendingUp className="text-3xl text-emerald-500" />,

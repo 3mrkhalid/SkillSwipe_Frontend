@@ -11,6 +11,8 @@ import { Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
 import { useLang } from "../_components/LanguageProvider";
 import { useTheme } from "../_components/ThemeContext";
+import { login } from "../api/auth";
+
 
 
 function Login() {
@@ -45,10 +47,10 @@ function Login() {
 
     try {
       setLoading(true);
-      const payload = { email, password };
-      const response = await login(payload);
+      
+     const data = await login({ email, password });
 
-      if (response.data.role === "admin") {
+     if (data.isAdmin === true) {
         router.push("/admin");
       } else {
         router.push("/dashboard");
@@ -81,16 +83,7 @@ function Login() {
       <div className={`relative z-10 p-8 rounded-3xl w-full max-w-md bg-white  shadow-2xl border border-white/20 transform transition-all duration-500 ${isMounted ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
         {/* Logo Section */}
         <div className={`flex items-center justify-center  mb-10  ${isArabic ? "flex-row-reverse " : ""}`}>
-          <div className="relative">
-            <img
-              src="/assets/img/logo.webp"
-              width={70}
-              height={50}
-              alt="Logo"
-              className="items-center"
-            />
-           
-          </div>
+         
 
           
           <h2 className="text-3xl font-bold text-gray-900 ">
@@ -169,7 +162,7 @@ function Login() {
                 id="remember"
                 checked={rememberMe}
                 onCheckedChange={(checked) => setRememberMe(checked)}
-                className="data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600"
+                className="data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600 border"
               />
               <label htmlFor="remember" className="text-sm text-gray-700 font-medium cursor-pointer select-none">
                 {t("remember_me") || "Remember me"}
@@ -206,14 +199,14 @@ function Login() {
         <div className="grid gap-3">
           <Button
             variant="outline"
-            className="w-full py-3 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
+            className="w-full py-3 rounded-xl border bg-white border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
           >
             <FcGoogle className="w-5 h-5" />
             <span>{t("sign_in_google") || "Continue with Google"}</span>
           </Button>
           <Button
             variant="outline"
-            className="w-full py-3 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
+            className="w-full py-3 rounded-xl border bg-white border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
           >
             <FaFacebook className="w-5 h-5 text-blue-600" />
             <span>{t("sign_in_facebook") || "Continue with Facebook"}</span>

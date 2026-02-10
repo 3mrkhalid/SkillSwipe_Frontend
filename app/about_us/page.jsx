@@ -5,11 +5,28 @@ import Header from '../_components/Header';
 import Footer from '../_components/Footer';
 import { useLang } from '../_components/LanguageProvider';
 import { useTheme } from '../_components/ThemeContext';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect, useState } from 'react';
 
 export default function AboutPage() {
   const { t } = useLang();
   const { theme } = useTheme();
   const isDark = theme === "dark";
+
+  const [mounted, setMounted] = useState(false);
+  
+
+  useEffect(() => {
+      setMounted(true);
+      AOS.init({
+        duration: 900,
+        once: true,
+        easing: "ease-in-out",
+      });
+    }, []);
+
+    if (!mounted) return null;
 
   const teamMembers = [
   {
@@ -41,10 +58,12 @@ export default function AboutPage() {
 
   return (
     <div className={`${isDark ? "bg-[#0f172a] " : "bg-gray-50 "}`}>
-      <Header className={`h-18 text-black`}/>
+      <div data-aos="fade-down">
+        <Header className={`h-18 text-black`}/>
+       </div>
     <div className={`min-h-screen transition-colors duration-300 ${isDark ? "bg-[#0f172a] text-white" : "bg-gray-50 text-gray-900"}`}>
       {/* Team Section */}
-      <section id="team" className="py-70 px-4">
+      <section id="team" className="py-70 px-4" data-aos="fade-up">
         <img src="/assets/img/logo-kernel.png" className='mx-auto w-30 h-30'/>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
@@ -107,7 +126,7 @@ export default function AboutPage() {
         
       </section>
       </div>
-
+          
       <Footer />
     </div>
   );
