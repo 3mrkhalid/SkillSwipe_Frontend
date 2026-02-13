@@ -1,7 +1,6 @@
 "use client"
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import LangSwitcher from "@/app/_components/LangSwitcher";
 
 import { useLang } from "@/app/_components/LanguageProvider";
@@ -9,6 +8,10 @@ import { useLang } from "@/app/_components/LanguageProvider";
 import { useTheme } from "@/app/_components/ThemeContext";
 
 import { Sun, Moon } from "lucide-react";
+
+import { logout } from "@/app/api/auth";
+
+import { useRouter } from "next/navigation";
 
 import {
   Popover,
@@ -21,11 +24,21 @@ import {
 
 function HeaderForDashboard() {
 
+   const router = useRouter();
   const { t, lang } = useLang();
   const isArabic = lang === "ar";
   const { theme, toggleTheme } = useTheme();
 
+  const handleLogout = async () => {
+    try {
+      await logout();
 
+      router.replace("/login");
+
+    } catch (err) {
+      console.log("error:", err);
+    }
+  };
 
   const menu = [
     { id: 1, name: t("Home"), link: "/" },
@@ -35,7 +48,7 @@ function HeaderForDashboard() {
 
 
   return (
-      <header className={`flex h-17 text-lg  items-center justify-between bg-white  border-b border-gray-500  px-4 md:px-8  py-2 w-full mx-auto `}>
+      <header className={`flex h-17 text-md  items-center justify-between bg-white  border-b border-gray-500  px-4 md:px-8  py-2 w-full mx-auto `}>
 
       {/* Logo + Menu */}
       <div className="flex items-center gap-8">
@@ -68,8 +81,8 @@ function HeaderForDashboard() {
       </button>
       
         
-         <Popover>
-          <PopoverTrigger>
+         <Popover >
+          <PopoverTrigger >
             <img
               src="/assets/img/user.png"
               alt="user_icon"
@@ -82,6 +95,7 @@ function HeaderForDashboard() {
                 href="/dashboard/profile"
                 className="py-1 px-2 flex items-center hover:bg-neutral-100 hover:rounded-lg transition duration-200 ease-in"
               >
+               
                 <img
                   src="/assets/img/profile-icon.png"
                   alt="profile"
@@ -104,7 +118,7 @@ function HeaderForDashboard() {
                 {t("Dashboard_Settings")}
               </Link>
               <button
-                // onClick={}
+               onClick={handleLogout}
                 className="py-1 px-2 flex items-center cursor-pointer hover:bg-neutral-100 hover:rounded-lg transition duration-200 ease-in"
               >
                 <img
@@ -120,6 +134,7 @@ function HeaderForDashboard() {
           </PopoverContent>
         </Popover>
       </div>
+     
     </header>
   );
 }

@@ -11,6 +11,7 @@ const decodeJWT = (token) => {
   }
 };
 
+
 /** The required middleware function export */
 export function middleware(req) {
   const { pathname } = req.nextUrl;

@@ -126,7 +126,7 @@ function About() {
           <motion.p
             variants={fadeIn}
             className={`
-              mt-4 max-w-md mx-auto text-center text-sm md:text-base leading-relaxed
+              mt-4 max-w-xl mx-auto text-center text-sm md:text-base leading-relaxed
               ${isDark ? "text-gray-400" : "text-neutral-700"}
             `}
           >

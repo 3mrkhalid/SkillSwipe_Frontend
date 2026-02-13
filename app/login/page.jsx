@@ -115,7 +115,7 @@ function Login() {
                 placeholder={t("email_placeholder") || "you@example.com"}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className={`w-full p-5 pl-10 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 ${isArabic ? "text-right pr-10 pl-3" : "text-left pl-10"}`}
+                className={`w-full p-5 pl-10 rounded-xl text-gray-800 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 ${isArabic ? "text-right pr-10 pl-3" : "text-left pl-10"}`}
                 
               />
               <div className={`absolute inset-y-0 ${isArabic ? 'right-3' : 'left-3'} flex items-center pointer-events-none`}>
@@ -137,7 +137,7 @@ function Login() {
                 placeholder={t("password_placeholder") || "Enter your password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className={`w-full p-5 ${isArabic ? 'pr-10 pl-12' : 'pl-10 pr-12'} rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300`}
+                className={`w-full p-5 text-gray-800 ${isArabic ? 'pr-10 pl-12' : 'pl-10 pr-12'} rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300`}
                 
               />
               <div className={`absolute inset-y-0 ${isArabic ? 'right-3' : 'left-3'} flex items-center pointer-events-none`}>
@@ -199,14 +199,14 @@ function Login() {
         <div className="grid gap-3">
           <Button
             variant="outline"
-            className="w-full py-3 rounded-xl border bg-white border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
+            className="w-full py-3 rounded-xl border text-gray-800 bg-white border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
           >
             <FcGoogle className="w-5 h-5" />
             <span>{t("sign_in_google") || "Continue with Google"}</span>
           </Button>
           <Button
             variant="outline"
-            className="w-full py-3 rounded-xl border bg-white border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
+            className="w-full py-3 rounded-xl border text-gray-800 bg-whitesdsadsads border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
           >
             <FaFacebook className="w-5 h-5 text-blue-600" />
             <span>{t("sign_in_facebook") || "Continue with Facebook"}</span>

@@ -19,10 +19,15 @@ export const register = async ({username, email, password }) => {
     username,
     email,
     password,
-  });
-
+});
   
   setToken(res.data.token);
 
   return res;
 };
+
+export const logout = async() => {
+  const res = await api.post("/api/v1/auth/logout");
+
+  return;
+}

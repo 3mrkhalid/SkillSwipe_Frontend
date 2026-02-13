@@ -21,49 +21,50 @@ const translations = {
     Ziad_Yasser:"Backend Developer",
     Ziad_Yasser_des:"Builds secure and scalable backend systems, APIs, and handles data flow between services and AI components.",
     Home: "Home",
-    hero: "Every Answer Counts",
-    description_Hero: "Join a community where every question gives you answers, and every answer earns you points. Swap skills, ideas, and knowledge effortlessly.",
+    hero: "Code Together. Build Together",
+    description_Hero: "Join a community where developers collaborate, share projects, and grow skills together. Work solo or team up — all in one platform.",
     
+    Welcome:"Welcome",
+    Welcome_sub:"We wish you a wonderful day with our app!",
 
-    Features_heading: "Measure How Your Skills Make a Difference",
+    Features_heading: "Your Developer Dashboard",
     Features_subheading:
-      "Share knowledge, ask questions, and earn points — all in one smart, interactive community platform.",
-    Features_Brand_title: "Video Lessons",
-    Features_Brand_description:
-      "Share your own skill videos or explore high-quality short lessons from the community, learn new techniques, get inspired, and connect with others who are passionate about growing together.",
-    Features_Detailed_title: "AI Recommendations",
-    Features_Detailed_description:
-      "Receive personalized suggestions for topics, questions, and challenges based on your activity and interests. Explore areas you haven't tried yet, discover new skills, and stay engaged with content tailored just for you.",
-    Features_Customizable_title: "Voice Q&A",
-    Features_Customizable_description:
-      "Ask questions or provide answers using your voice for faster, more natural interaction. Participate in real-time discussions, explain your ideas clearly, and connect with the community without typing a single word.",
-    Weekly_Challenges:"Weekly Challenges",  
-    Features_Weekly_Challenges: "Compete weekly, earn points, and climb the leaderboard.",
-    Community_Chat:"Community Chat",
-    Features_Community_Chat:"Discuss topics, share tips, and help each other.",
+      "Manage your projects, track contributions, and see real-time collaboration in action.",
+    Features_Collaboration: "Real-Time Code Collaboration",
+    Features_Collaboration_description:
+      "Code with your team or community in real-time. Track edits, discuss changes, and see everyone’s work live.",
+    Features_Host: "Host & Share Your Projects",
+    Features_Host_description:
+      "Upload your projects, make them public or private, and invite collaborators to contribute.",
+    Features_Learn_title: "Learn & Share Knowledge",
+    Features_Learn_description:
+      "Upload short video tutorials, watch community lessons, and exchange coding techniques.",
+    Features_Suggestions:"Smart Suggestions",  
+    Features_Suggestions_description: "Get recommendations for projects, challenges, or topics based on your activity. Explore areas you haven’t tried yet.",
+    Community_Voice:"Voice Collaboration",
+    Features_Community_Voice:"Ask questions or explain code using your voice. Participate in real-time discussions without typing a single line.",
+    Weekly_Coding_Challenges:"Weekly Coding Challenges",
+    Weekly_Coding_Challenges_description:"Participate in challenges, earn points, and climb the leaderboard. Track your progress and skill accuracy over time.",
 
-    AI_Accuracy_Score:"Skill Accuracy Score",
-    Features_AI_Accuracy_Score:"Track how accurate your contributions are rated by the community.",
-
-    About_Headline:"100% Free Knowledge Sharing for Everyone",
-    About_SubTitle:"Join SkillSwap and explore a community where sharing knowledge is rewarding. Ask questions, provide answers, and discover new skills — all for free.",
+    About_Headline:"100% Free Collaboration for Developers",
+    About_SubTitle:"Join our platform and explore a community where building, coding, and collaborating is rewarding. Share projects, work together in real-time, and grow your skills — completely free.",
 
     About_Security:"Reputation",
-    About_Security_sub:"Build your reputation by sharing valuable insights and helping others. Earn recognition in the community as your contributions grow and make a real impact.",
+    About_Security_sub:"Showcase your contributions, help others in the community, and get recognized for your work. Earn credibility as your projects, edits, and collaborations make an impact.",
     About_Performance:"Progress Tracking",
-    About_Performance_sub:"Keep track of all your questions, answers, and challenges. See your progress, points earned, and how your skills are developing over time",
+    About_Performance_sub:"Keep detailed records of your projects, code contributions, and collaborative sessions. Monitor how your skills are improving and see your achievements over time.",
     About_Ability:"Personalized Experience",
-    About_Ability_sub:"Customize your learning path and notifications. Get suggested topics, challenges, and skill swaps tailored to your interests and activity.",
+    About_Ability_sub:"Customize your dashboard, notifications, and project view. Get recommendations for projects, tutorials, or collaborators based on your activity and interests.",
 
     how_it_works_title:"Get Started in 3 Easy Steps",
-    how_it_works_subtitle:"Turn knowledge into action — summarize, translate, and create smarter content in second.",
-    step1_title:"Discover Skills",
-    step1_description:"Browse skills, topics, and short videos shared by the community.",
-    step2_title:"Swap Knowledge",
-    step2_description:"Ask questions, share answers, or exchange skills with other members.",
-    step3_title:"Grow & Earn",
-    step3_description:"Build your reputation, earn points, and unlock new learning opportunities",
-    free_trial_text:"Learn and share your skills 100% free.",
+    how_it_works_subtitle:"Turn ideas into real projects — code, collaborate, and grow your skills with the community.",
+    step1_title:"Discover Projects & Collaborators",
+    step1_description:"Browse community projects, explore coding challenges, and find developers to team up with.",
+    step2_title:"Collaborate & Build Together",
+    step2_description:"Join live coding sessions, contribute to projects, share your own code, or work solo — all in one platform.",
+    step3_title:"Grow Your Skills & Reputation",
+    step3_description:"Track your contributions, earn recognition, and unlock new features as you improve and collaborate more.",
+    free_trial_text:"Get Started — 100% Free",
 
     Footer_Heading: "Learn, and Share Skills",
     Footer_Description:
@@ -177,32 +178,35 @@ const translations = {
     Mostafa_Ali_des:"يقوم بتصميم وبناء واجهات مستخدم حديثة وسريعة الاستجابة مع التركيز القوي على الأداء وتجربة المستخدم.",
     Ziad_Yasser:"مطور الواجهة الخلفية",
     Ziad_Yasser_des:"يقوم ببناء أنظمة خلفية وواجهات برمجة تطبيقات آمنة وقابلة للتطوير، ويتعامل مع تدفق البيانات بين الخدمات ومكونات الذكاء الاصطناعي.",
-    hero: "كل إجابة مميزه",
-    description_Hero: "انضم إلى مجتمع حيث يمنحك كل سؤال إجابات، وكل إجابة تكسبك نقاطًا. تبادل المهارات والأفكار والمعرفة دون عناء.",
-    Features_heading:"قم بقياس مدى تأثير مهاراتك",
+    
+    Welcome:"مرحبا ",
+    Welcome_sub:"نتمنى لك يوماً رائعاً مع تطبيقنا!",
+
+    hero: "نبرمج ونبني معا",
+    description_Hero: "انضم إلى مجتمع يتعاون فيه المطورون ويشاركون المشاريع ويزرعون المهارات معًا. العمل منفردًا أو كفريق واحد — كل ذلك في منصة واحدة.",
+   
+    Features_heading: "لوحة معلومات المطور الخاصة بك",
     Features_subheading:
-      "سواء كنت تريد تلخيص المقالات والفيديوهات، إنشاء أسئلة تلقائيًا، ترجمة محتوى الفيديو، أو تحدي مهاراتك، منصتنا تمنحك تجربة AI شاملة وممتعة.",
-    Features_Brand_title:"شرح فيديو",
-    Features_Brand_description:"شارك مقاطع فيديو مهاراتك الخاصة أو استكشف دروسًا قصيرة عالية الجودة من المجتمع، وتعلم تقنيات جديدة، واحصل على الإلهام، وتواصل مع الآخرين المتحمسين للنمو معًا.",
-    Features_Detailed_title: "توصيات الذكاء الاصطناعي",
-    Features_Detailed_description:
-  "احصل على اقتراحات مخصصة للموضوعات والأسئلة والتحديات بناءً على نشاطك واهتماماتك. استكشف المجالات التي لم تجربها بعد، واكتشف مهارات جديدة، وابقَ منخرطًا في المحتوى المصمم خصيصًا لك.",
-    Features_Customizable_title: "أسئلة وأجوبة صوتية",
-    Features_Customizable_description:
-      "اطرح الأسئلة أو قدم الإجابات باستخدام صوتك للتفاعل بشكل أسرع وأكثر طبيعية. شارك في المناقشات في الوقت الفعلي، واشرح أفكارك بوضوح، وتواصل مع المجتمع دون كتابة كلمة واحدة.",
-
-    Weekly_Challenges:"التحديات الاسبوعية",  
-    Features_Weekly_Challenges:"تنافس أسبوعيًا واكسب النقاط وتسلق قائمة المتصدرين",
-
-    Community_Chat:"الدردشة المجتمعية",
-    Features_Community_Chat:"انضم إلى غرف المناقشة لمشاركة الأفكار والتعلم معًا",
-
-    AI_Accuracy_Score:"درجة دقة المهارة",
-    Features_AI_Accuracy_Score:"تتبع مدى دقة تقييم مساهماتك من قبل المجتمع.",
+      "قم بإدارة مشاريعك، وتتبع المساهمات، وشاهد التعاون في الوقت الفعلي أثناء العمل.",
+    Features_Collaboration: "التعاون في مجال الكود في الوقت الحقيقي",
+    Features_Collaboration_description:
+      "قم بالبرمجة مع فريقك أو مجتمعك في الوقت الفعلي. تتبع التعديلات، وناقش التغييرات، وشاهد أعمال الجميع مباشرة.",
+    Features_Host: "استضافة ومشاركة مشاريعك",
+    Features_Host_description:
+      "قم بتحميل مشاريعك، واجعلها عامة أو خاصة، وقم بدعوة المتعاونين للمساهمة.",
+    Features_Learn_title: "تعلم وشارك المعرفة",
+    Features_Learn_description:
+      "قم بتحميل مقاطع فيديو تعليمية قصيرة، وشاهد دروس المجتمع، وتبادل تقنيات البرمجة.",
+    Features_Suggestions:"اقتراحات ذكية",  
+    Features_Suggestions_description: "احصل على توصيات للمشاريع أو التحديات أو المواضيع بناءً على نشاطك. استكشف المناطق التي لم تجربها بعد.",
+    Community_Voice:"التعاون الصوتي",
+    Features_Community_Voice:"اطرح الأسئلة أو اشرح الكود باستخدام صوتك. شارك في المناقشات في الوقت الفعلي دون كتابة سطر واحد.",
+    Weekly_Coding_Challenges:"تحديات البرمجة الأسبوعية",
+    Weekly_Coding_Challenges_description:"شارك في التحديات واكسب النقاط وتسلق لوحة المتصدرين. تتبع تقدمك ودقة مهاراتك بمرور الوقت.",
 
 
-    About_Headline:"مشاركة المعرفة مجانًا بنسبة 100% للجميع",
-    About_SubTitle:"انضم إلى SkillSwap واستكشف مجتمعًا يكون فيه تبادل المعرفة أمرًا مجزيًا. اطرح الأسئلة، وقدم الإجابات، واكتشف مهارات جديدة — كل ذلك مجانًا.",
+    About_Headline:"تعاون مجاني 100% للمطورين",
+    About_SubTitle:"انضم إلى منصتنا واستكشف مجتمعًا يكون فيه البناء والبرمجة والتعاون أمرًا مجزيًا. شارك المشاريع، واعمل معًا في الوقت الفعلي، وقم بتنمية مهاراتك — مجانًا تمامًا.",
 
     About_Security:"السمعه",
     About_Security_sub:"قم ببناء سمعتك من خلال مشاركة الأفكار القيمة ومساعدة الآخرين. احصل على التقدير في المجتمع مع نمو مساهماتك وإحداث تأثير حقيقي.",

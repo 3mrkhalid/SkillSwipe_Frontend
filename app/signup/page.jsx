@@ -105,7 +105,7 @@ const isDark = theme === "dark";
             placeholder={t("username")}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className={`w-full p-5 pl-10 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 ${isArabic ? 'pr-10 pl-12' : 'pl-10 pr-12'}`}
+            className={`w-full p-5 pl-10 rounded-xl border text-gray-800 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 ${isArabic ? 'pr-10 pl-12' : 'pl-10 pr-12'}`}
           />
           <div className={`absolute inset-y-0 ${isArabic ? 'right-3' : 'left-3'} flex items-center pointer-events-none`}>
             <svg
@@ -138,7 +138,7 @@ const isDark = theme === "dark";
                 placeholder={t("email_address")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className={`w-full p-5 pl-10 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300  ${isArabic ? 'pr-10 pl-12' : 'pl-10 pr-12'}`}
+                className={`w-full p-5 pl-10 rounded-xl border text-gray-800 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300  ${isArabic ? 'pr-10 pl-12' : 'pl-10 pr-12'}`}
               />
               <div className={`absolute inset-y-0 ${isArabic ? 'right-3' : 'left-3'} flex items-center pointer-events-none`}>
                 <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -155,7 +155,7 @@ const isDark = theme === "dark";
               placeholder={t("password")}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className={`w-full p-5 pl-10 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 ${isArabic ? 'pr-10 pl-12' : 'pl-10 pr-12'}`}
+              className={`w-full p-5 pl-10 rounded-xl border text-gray-800 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 ${isArabic ? 'pr-10 pl-12' : 'pl-10 pr-12'}`}
             />
             <div className={`absolute inset-y-0 ${isArabic ? 'right-3' : 'left-3'} flex items-center pointer-events-none`}>
             <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,7 +179,7 @@ const isDark = theme === "dark";
             placeholder={t("repeat_password")}
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className={`w-full p-5 pl-10 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 ${isArabic ? 'pr-10 pl-12' : 'pl-10 pr-12'}`}
+            className={`w-full p-5 pl-10 rounded-xl border text-gray-800 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 ${isArabic ? 'pr-10 pl-12' : 'pl-10 pr-12'}`}
           />
 
           <div className={`absolute inset-y-0 ${isArabic ? 'right-3' : 'left-3'} flex items-center pointer-events-none`}>
@@ -233,7 +233,10 @@ const isDark = theme === "dark";
         {/* Login link */}
         <p className="text-center mt-6 text-gray-600">
           {t("already_have_account")}{" "}
-          <Link href="/login" className="text-blue-600 font-semibold">
+            <Link
+              href="/login"
+              className="font-semibold text-blue-600 hover:text-blue-700 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300"
+            >
             {t("sign_in")}
           </Link>
         </p>

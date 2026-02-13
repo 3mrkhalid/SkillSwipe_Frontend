@@ -2,9 +2,11 @@
 import React from "react";
 import { useLang } from "./LanguageProvider";
 
-import { FaVideo, FaMicrophone, FaTrophy, FaComments, FaBullseye } from "react-icons/fa";
-import { AiOutlineRobot } from "react-icons/ai";
+import { FaMicrophone, FaTrophy } from "react-icons/fa";
+import {AiOutlineRobot} from "react-icons/ai"
 import { useTheme } from "./ThemeContext";
+import { RiTeamLine, RiFolderLine, RiErrorWarningLine, } from "react-icons/ri";
+
 
 function Features() {
   const { t, lang } = useLang();
@@ -15,54 +17,54 @@ function Features() {
 
   const features = [
     {
-      icon: <FaVideo className="w-8 h-8" />,
-      title: t("Features_Brand_title"),
-      description: t("Features_Brand_description") || "Track your link performance with detailed insights and real-time analytics.",
+      icon: <RiTeamLine className="w-8 h-8" />,
+      title: t("Features_Collaboration"),
+      description: t("Features_Collaboration_description") || "Track your link performance with detailed insights and real-time analytics.",
       gradient: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100",
       delay: "0"
     },
     {
-      icon: <AiOutlineRobot className="w-8 h-8" />,
-      title: t("Features_Detailed_title") || "Lightning Fast",
-      description: t("Features_Detailed_description") || "Instant URL shortening with sub-second response times and 99.9% uptime.",
-      gradient: "from-purple-500 to-pink-500",
-      bgColor: "bg-purple-50",
+      icon: <RiFolderLine className="w-8 h-8" />,
+      title: t("Features_Host") || "Lightning Fast",
+      description: t("Features_Host_description") || "Instant URL shortening with sub-second response times and 99.9% uptime.",
+      gradient: "from-orange-500 to-pink-500",
+      bgColor: "bg-orange-50",
       borderColor: "border-purple-100",
       delay: "100"
     },
     {
-      icon: <FaMicrophone className="w-8 h-8" />,
-      title: t("Features_Customizable_title") || "Fully Customizable",
-      description: t("Features_Customizable_description") || "Create branded links with custom domains, aliases, and QR codes.",
-      gradient: "from-orange-500 to-red-500",
-      bgColor: "bg-orange-50",
+      icon: <RiErrorWarningLine className="w-8 h-8" />,
+      title: t("Features_Learn_title") || "Fully Customizable",
+      description: t("Features_Learn_description") || "Create branded links with custom domains, aliases, and QR codes.",
+      gradient: "from-red-500 to-red-400",
+      bgColor: "bg-red-50",
       borderColor: "border-orange-100",
       delay: "200"
     },
     {
-      icon: <FaTrophy className="w-8 h-8" />,
-      title: t("Weekly_Challenges"),
-      description: t("Features_Weekly_Challenges"),
+      icon: <AiOutlineRobot className="w-8 h-8" />,
+      title: t("Features_Suggestions"),
+      description: t("Features_Suggestions_description"),
       gradient: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50",
       borderColor: "border-green-100",
       delay: "300"
     },
     {
-      icon: <FaComments className="w-8 h-8" />,
-      title: t("Community_Chat"),
-      description: t("Features_Community_Chat"),
+      icon: <FaMicrophone className="w-8 h-8" />,
+      title: t("Community_Voice"),
+      description: t("Features_Community_Voice"),
       gradient: "from-violet-500 to-purple-500",
       bgColor: "bg-violet-50",
       borderColor: "border-violet-100",
       delay: "400"
     },
     {
-      icon: <FaBullseye className="w-8 h-8" />,
-      title: t("AI_Accuracy_Score"),
-      description: t("Features_AI_Accuracy_Score"),
+      icon: <FaTrophy className="w-8 h-8" />,
+      title: t("Weekly_Coding_Challenges"),
+      description: t("Weekly_Coding_Challenges_description"),
       gradient: "from-indigo-500 to-blue-500",
       bgColor: "bg-indigo-50",
       borderColor: "border-indigo-100",

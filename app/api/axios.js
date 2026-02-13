@@ -22,7 +22,7 @@ api.interceptors.response.use(
   async (error) => {
     const original = error.config;
 
-    if (error.response?.status === 403 && !original._retry) {
+    if ([401, 403].includes(error.response?.status) && !original._retry){
       if (isRefreshing) {
         return new Promise((resolve, reject) => {
           queue.push({
@@ -39,7 +39,7 @@ api.interceptors.response.use(
       isRefreshing = true;
 
       try {
-        const res = await api.post("/auth/v1/refresh");
+        const res = await api.get("/api/v1/auth/refresh");
         setToken(res.data.accessToken);
 
         queue.forEach((p) => p.resolve(res.data.accessToken));

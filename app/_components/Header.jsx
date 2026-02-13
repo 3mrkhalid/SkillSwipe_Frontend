@@ -29,7 +29,7 @@ function Header() {
 
 
   return (
-      <header className={`flex h-20 text-lg  items-center justify-between bg-white  backdrop-blur-md shadow-md rounded-b-lg px-4 md:px-8  py-2 w-[90%] mx-auto `}>
+      <header className={`flex h-20 text-md  items-center justify-between bg-white  backdrop-blur-md shadow-md md:rounded-b-lg px-4 md:px-8  py-2 md:w-[90%] mx-auto `}>
 
       {/* Logo + Menu */}
       <div className="flex items-center gap-8">

@@ -36,7 +36,7 @@ function Hero({ className = "" }) {
             <h1
               className={`
                 font-bold tracking-tight
-                 text-4xl sm:text-5xl md:text-5xl  xl:text-7xl 
+                 text-4xl sm:text-5xl md:text-3xl  xl:text-7xl 
               `}
             >
              <span

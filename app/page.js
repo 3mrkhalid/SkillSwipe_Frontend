@@ -27,7 +27,7 @@ export default function Home() {
   if (!mounted) return null; // Don't render until client
 
   return (
-    <div className={`${theme === "light" ? " " : "bg-[#0f172a]"}`}>
+    <div className={`${theme === "light" ? " bg-gray-50" : "bg-[#0f172a]"}`}>
       <div data-aos="fade-down">
         <Header className="md:px-20 h-18" />
       </div>
