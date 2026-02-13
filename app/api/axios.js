@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken, setToken, clearToken } from "../auth/tokenManager";
 
 const api = axios.create({
-  baseURL: /api,
+  baseURL: "/api",
   withCredentials: true,
 });
 
