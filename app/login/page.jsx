@@ -87,7 +87,7 @@ function Login() {
 
           
           <h2 className="text-3xl font-bold text-gray-900 ">
-            {t("sign_in") || "Sign In"}
+            {t("sign_in_hed")}
           </h2>
           
         </div>
@@ -199,17 +199,18 @@ function Login() {
         <div className="grid gap-3">
           <Button
             variant="outline"
-            className="w-full py-3 rounded-xl border text-gray-800 bg-white border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
+            className="w-full py-3 rounded-xl border text-gray-800 bg-white border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3  cursor-pointer hover:scale-102"
+            onClick={() => window.location.href = `${process.env.NEXT_PUBLIC_API_URL}/auth/google`}
           >
-            <FcGoogle className="w-5 h-5" />
-            <span>{t("sign_in_google") || "Continue with Google"}</span>
+            <FcGoogle className="text-2xl"/>
+            <span >{t("sign_in_google") || "Continue with Google"}</span>
           </Button>
           <Button
             variant="outline"
-            className="w-full py-3 rounded-xl border text-gray-800 bg-whitesdsadsads border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 font-medium cursor-pointer hover:scale-102"
+            className="w-full py-3 rounded-xl border text-gray-800 bg-whitesdsadsads border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer hover:scale-102"
           >
-            <FaFacebook className="w-5 h-5 text-blue-600" />
-            <span>{t("sign_in_facebook") || "Continue with Facebook"}</span>
+            <FaFacebook className="text-blue-600 text-2xl" />
+            <span >{t("sign_in_facebook") || "Continue with Facebook"}</span>
           </Button>
         </div>
 

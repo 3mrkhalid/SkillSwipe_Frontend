@@ -23,9 +23,12 @@ const translations = {
     Home: "Home",
     hero: "Code Together. Build Together",
     description_Hero: "Join a community where developers collaborate, share projects, and grow skills together. Work solo or team up — all in one platform.",
-    
+    Go_Back: "Go Back",
     Welcome:"Welcome",
     Welcome_sub:"We wish you a wonderful day with our app!",
+
+    NotAuthorized_title:"Access Denied",
+    NotAuthorized_subtitle:"Sorry, you don't have the necessary permissions to view this page.",
 
     Features_heading: "Your Developer Dashboard",
     Features_subheading:
@@ -72,8 +75,9 @@ const translations = {
     Footer_copyright:"© 2026 Kernel Syndicators. All rights reserved.",
     //Login && Register
     register:"Register",
-    sign_in: "Sign In",
-    sign_up: "Sign Up",
+    sign_in_hed:"Login",
+    sign_in: "sign in",
+    sign_up: "Sign up",
     email_address: "Email Address",
     password: "Password",
     forgot_password: "Forgot Password?",
@@ -181,7 +185,9 @@ const translations = {
     
     Welcome:"مرحبا ",
     Welcome_sub:"نتمنى لك يوماً رائعاً مع تطبيقنا!",
-
+    Go_Back: "العودة للخلف",
+    NotAuthorized_title:"تم رفض الوصول",
+    NotAuthorized_subtitle:"عذرًا، ليس لديك الأذونات اللازمة لعرض هذه الصفحة.",
     hero: "نبرمج ونبني معا",
     description_Hero: "انضم إلى مجتمع يتعاون فيه المطورون ويشاركون المشاريع ويزرعون المهارات معًا. العمل منفردًا أو كفريق واحد — كل ذلك في منصة واحدة.",
    
@@ -237,6 +243,7 @@ const translations = {
 
     //Login && Register
     register:"التسجيل",
+    sign_in_hed:"تسجيل الدخول",
     sign_in: "تسجيل الدخول",
     sign_up: "إنشاء حساب",
     logout: "خروج",

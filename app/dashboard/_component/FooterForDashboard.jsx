@@ -1,6 +1,6 @@
+"use client";
 import React from "react";
 import { useLang } from "@/app/_components/LanguageProvider";
-import Image from "next/image";
 
 const FooterForDashboard = () => {
   const { t } = useLang();
@@ -13,11 +13,11 @@ const FooterForDashboard = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
            
-            <span className="text-white font-bold text-lg">Skill Swipe</span>
+            <span className="hidden md:flex text-white font-bold text-lg">Skill Swipe</span>
           </div>
 
           {/* Copyright */}
-          <p className="text-gray-400 text-sm">
+          <p className=" text-gray-400 text-sm">
             {t("Footer_copyright")}
           </p>
 

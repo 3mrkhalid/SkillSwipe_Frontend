@@ -48,7 +48,7 @@ function HeaderForDashboard() {
 
 
   return (
-      <header className={`flex h-17 text-md  items-center justify-between bg-white  border-b border-gray-500  px-4 md:px-8  py-2 w-full mx-auto `}>
+      <header className={`flex h-17 text-md  items-center justify-between bg-white  border-b border-gray-300  px-4 md:px-8  py-2 w-full mx-auto `}>
 
       {/* Logo + Menu */}
       <div className="flex items-center gap-8">

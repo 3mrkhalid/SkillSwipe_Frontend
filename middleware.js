@@ -1,38 +1,40 @@
 import { NextResponse } from "next/server";
 
-/** Decode JWT manually (Edge compatible) */
+/** Edge-safe Base64 decode */
 const decodeJWT = (token) => {
   try {
     const payload = token.split(".")[1];
-    const decoded = JSON.parse(atob(payload));
+    const decoded = JSON.parse(
+      Buffer.from(payload, "base64").toString("utf-8")
+    );
     return decoded;
   } catch {
     return null;
   }
 };
 
-
-/** The required middleware function export */
 export function middleware(req) {
   const { pathname } = req.nextUrl;
+  const token = req.cookies.get("jwt")?.value;
 
-  // PUBLIC PAGES
+  // ===== PUBLIC PAGES =====
   const publicPaths = ["/login", "/signup", "/"];
   if (publicPaths.includes(pathname)) {
-    const token = req.cookies.get("jwt")?.value;
     if (token) {
       const decoded = decodeJWT(token);
+
       if (decoded?.UserInfo?.isAdmin) {
         return NextResponse.redirect(new URL("/admin", req.url));
-      } else {
+      }
+
+      if (decoded?.UserInfo) {
         return NextResponse.redirect(new URL("/dashboard", req.url));
       }
     }
     return NextResponse.next();
   }
 
-  // PROTECTED PAGES
-  const token = req.cookies.get("jwt")?.value;
+  // ===== PROTECTED PAGES =====
   if (!token) {
     return NextResponse.redirect(new URL("/login", req.url));
   }
@@ -42,15 +44,13 @@ export function middleware(req) {
     return NextResponse.redirect(new URL("/login", req.url));
   }
 
-  // User pages
-  if (pathname.startsWith("/dashboard") && decoded.UserInfo.isAdmin) {
-    return NextResponse.redirect(new URL("/admin", req.url));
-  }
+//   // ===== ADMIN PROTECTION =====
+//   if (pathname.startsWith("/admin") && !decoded.UserInfo.isAdmin) {
+//     return NextResponse.redirect(new URL("/dashboard", req.url));
+//   }
 
-  // Admin pages
-  if (pathname.startsWith("/admin") && !decoded.UserInfo.isAdmin) {
-    return NextResponse.redirect(new URL("/dashboard", req.url));
-  }
+  // ===== USER PROTECTION =====
+ 
 
   return NextResponse.next();
 }

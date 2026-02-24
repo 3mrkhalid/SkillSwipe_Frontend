@@ -1,15 +1,11 @@
-/** @type {import('tailwindcss').Config} */
-const config = {
-  darkMode: 'class',
-  
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
+// next.config.mjs
+export default {
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'https://skillswipebackend-production.up.railway.app/:path*',
+      },
+    ];
   },
-  plugins: [],
-};
-
-export default config;
+}

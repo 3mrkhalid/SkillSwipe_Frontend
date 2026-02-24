@@ -23,7 +23,7 @@ function Mainpage() {
     const fetchUser = async () => {
       try {
         const res = await me();
-        setUser(res.data);
+        setUser(res);
       } catch (err) {
         console.log(err);
       }
@@ -31,6 +31,7 @@ function Mainpage() {
 
     fetchUser();
   }, []);
+
 
   // Sample data for sheets
   const recentActivities = [
@@ -63,7 +64,7 @@ function Mainpage() {
                 {t("Welcome")}
               </span>
               <span className={`ml-3 text-gray-800 dark:text-gray-200 ${theme === "dark"? "text-white": "text-zinc-900"}`}>
-                {user.user?.username}
+                {user?.username}
               </span>
             </h1>
             <p className={` md:text-lg text-md mt-2 ${theme === "dark"? "text-gray-300":"text-zinc-900"}`}>
@@ -127,7 +128,7 @@ function Mainpage() {
                   <FiMail className={`w-5 h-5 ${theme === "dark"? "text-gray-300":"text-gray-500"}`} />
                     <p className={`text-sm ${theme === "dark"? "text-gray-300":"text-gray-500"}`}>Email</p>
                   </div>
-                  <p className={`${theme === "dark"? "text-white":"text-zinc-900"}`}>{user.user?.email}</p>
+                  <p className={`${theme === "dark"? "text-white":"text-zinc-900"}`}>{user?.email}</p>
                 </div>
               </div>
               
@@ -138,8 +139,8 @@ function Mainpage() {
                   Member Since
                 </p>
 
-                  <p className={`${theme === "dark"? "text-white":"text-zinc-900"}`}>{user.user?.createdAt 
-                    ? new Date(user.user.createdAt).toLocaleDateString() 
+                  <p className={`${theme === "dark"? "text-white":"text-zinc-900"}`}>{user?.createdAt 
+                    ? new Date(user.createdAt).toLocaleDateString() 
                     : "Not available"}</p>
                 </div>
               </div>
@@ -195,7 +196,7 @@ function Mainpage() {
               : "bg-white border border-gray-200 shadow-md"
             }`}
           >
-            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-800 dark:text-gray-200">
+            <h2 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${theme === "dark"? "text-gray-200":"text-gray-800"}`}>
               <FiSettings className="w-5 h-5" />
               Quick Actions
             </h2>
